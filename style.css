@@ -2,6 +2,7 @@
 :root {
 	--purple: #dcd2f5;
 	--purple-light: #f5f2fc;
+	--hero-purple: #eee8fb;
 	--purple-dark: #7561a8;
 	--ink: #25202f;
 	--muted: #6f697a;
@@ -88,8 +89,15 @@ nav a:focus,
 }
 
 .hero {
-	padding-top: 130px;
-	padding-bottom: 145px;
+	width: 100%;
+	max-width: none;
+	padding: 130px 6% 145px;
+	background: var(--hero-purple);
+	color: #302744;
+}
+
+.hero .eyebrow {
+	color: #665394;
 }
 
 .eyebrow {
@@ -126,7 +134,7 @@ h1 {
 .hero-text {
 	max-width: 450px;
 	margin-bottom: 34px;
-	color: var(--muted);
+	color: #5b5368;
 	font-size: 1.15rem;
 }
 
@@ -268,37 +276,55 @@ h3 {
 }
 
 .contact {
-	padding-top: 120px;
-	padding-bottom: 125px;
+	padding-top: 80px;
+	padding-bottom: 85px;
 	text-align: center;
 }
 
 .contact h2 {
-	margin-bottom: 25px;
+	margin-bottom: 18px;
+	font-size: clamp(2rem, 3.5vw, 3.2rem);
 }
 
 .contact-text {
-	max-width: 420px;
-	margin: 0 auto 32px;
+	max-width: 390px;
+	margin: 0 auto 24px;
 	color: var(--muted);
+	font-size: 0.95rem;
 }
 
 .contact-links {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 28px;
+	gap: 20px;
 	flex-wrap: wrap;
 }
 
+.contact .button,
 .social-link {
 	border-bottom: 1px solid var(--purple-dark);
 	padding-bottom: 3px;
+	color: var(--ink);
 	font-family: Arial, sans-serif;
 	font-size: 0.76rem;
 	font-weight: bold;
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
+}
+
+.contact .button {
+	border-bottom: 0;
+	padding: 14px 22px;
+	background: var(--ink);
+	color: var(--white);
+}
+
+.contact .button:hover,
+.contact .button:focus {
+	background: var(--purple-dark);
+	color: var(--white);
+	transform: translateY(-2px);
 }
 
 .site-footer {
@@ -351,8 +377,8 @@ h3 {
 	}
 
 	.contact {
-		padding-top: 85px;
-		padding-bottom: 90px;
+		padding-top: 65px;
+		padding-bottom: 70px;
 	}
 
 	.site-footer {
